@@ -1,18 +1,54 @@
 # 🚀 Automated Database Normalizer
 
-A Python-based web application that automates database normalization up to Third Normal Form (3NF). The application allows users to provide a flat JSON record and functional dependencies, then automatically generates a normalized database schema along with SQL scripts.
+A Python-based web application that automates database normalization up to **Third Normal Form (3NF)**. The application allows users to enter a flat JSON record and functional dependencies, then automatically generates normalized database tables, SQL scripts, and downloadable database schema files through an interactive web interface.
+
+---
+## 🏠 Home Screen
+
+Complete web interface of the Automated Database Normalizer.
+
+![Home Screen](screenshots_s/homepage.png)
 
 ---
 
-## 📌 Features
+## ✨ Features
 
-- Accepts raw data in JSON format
-- Accepts user-defined Functional Dependencies (FDs)
-- Automatically decomposes data into 3NF tables
-- Displays normalized tables in an interactive interface
-- Generates SQL CREATE TABLE statements
-- Generates SQL INSERT statements
-- Download complete SQL schema as a `.sql` file
+- 📥 Accepts raw data in JSON format
+- 🔗 Accepts user-defined Functional Dependencies (FDs)
+- ⚡ Automatically generates 3NF tables
+- 🗂️ Displays normalized tables interactively
+- 🔑 Identifies primary keys for each relation
+- 📝 Generates SQL `CREATE TABLE` statements
+- 💾 Generates SQL `INSERT` statements
+- 📥 Download complete SQL schema as a `.sql` file
+
+---
+
+# 📸 Application Screenshots
+
+
+
+## 📥 Input Data
+
+Users provide a JSON record and functional dependencies.
+
+![Input Data](screenshots_s/input.png)
+
+---
+
+## 🗂️ Normalized Tables
+
+Automatically generated normalized tables after processing the input.
+
+![Normalized Tables](screenshots_s/normalized_tables.png)
+
+---
+
+## 💾 SQL Export
+
+Download the generated SQL script containing `CREATE TABLE` and `INSERT` statements.
+
+![SQL Export](screenshots/_sexport_sql.png)
 
 ---
 
@@ -26,47 +62,66 @@ A Python-based web application that automates database normalization up to Third
 
 ---
 
-## 🚀 How to Run
+## 📂 Project Structure
 
-1. Clone the repository
+```text
+automated-database-normalizer/
+│
+├── app.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── screenshots/
+│   ├── homepage.png
+│   ├── input.png
+│   ├── normalized_tables.png
+│   └── export_sql.png
+└── venv/
+```
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/automated-database-normalizer.git
 ```
 
-2. Navigate to the project
+### 2. Open the project folder
 
 ```bash
 cd automated-database-normalizer
 ```
 
-3. Create a virtual environment
+### 3. Create a virtual environment
 
 ```bash
 python -m venv venv
 ```
 
-4. Activate the environment
+### 4. Activate the virtual environment
 
-macOS/Linux
+### macOS / Linux
 
 ```bash
 source venv/bin/activate
 ```
 
-Windows
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-5. Install dependencies
+### 5. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-6. Run the application
+### 6. Run the application
 
 ```bash
 streamlit run app.py
@@ -74,7 +129,7 @@ streamlit run app.py
 
 ---
 
-## 📷 Example Input
+# 📥 Example Input
 
 ### JSON Record
 
@@ -90,7 +145,7 @@ streamlit run app.py
 
 ### Functional Dependencies
 
-```
+```text
 StudentID -> StudentName
 CourseID -> CourseName
 StudentID, CourseID -> Grade
@@ -98,36 +153,44 @@ StudentID, CourseID -> Grade
 
 ---
 
-## 📊 Output
+# 📊 Output
 
 The application automatically:
 
-- Creates normalized tables
-- Displays each relation
+- Creates normalized database tables
+- Displays each relation in tabular format
 - Identifies primary keys
-- Generates SQL scripts
-- Allows SQL download
+- Generates SQL `CREATE TABLE` statements
+- Generates SQL `INSERT` statements
+- Allows users to download the complete SQL script
 
 ---
 
-## 🎯 Project Motivation
+# 🎯 Project Motivation
 
-Database normalization is often performed manually during academic exercises and database design. This project automates the process by converting a flat record into a normalized schema, making it easier to understand normalization concepts while reducing manual effort.
+Database normalization is an essential part of database design, but it is often performed manually during coursework and practice. This project simplifies that process by providing an interactive application that converts a flat data record into a normalized database schema based on user-defined functional dependencies.
+
+The project bridges database theory with practical software development by combining Python, Streamlit, and SQL into a single interactive application.
 
 ---
 
-## 🔮 Future Improvements
+# 🔮 Future Improvements
 
 - Candidate Key Detection
 - Minimal Cover Generation
 - BCNF Normalization
-- Foreign Key Generation
-- CSV Upload Support
+- Automatic Foreign Key Generation
+- CSV File Upload Support
 - ER Diagram Generation
-- Better SQL Type Inference
+- Better SQL Data Type Inference
+- Support for Multiple Records
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-**SAHIL JANGRA**
+**SAHIL Jangra**
+
+---
+
+## ⭐ If you found this project useful, consider giving it a star!
