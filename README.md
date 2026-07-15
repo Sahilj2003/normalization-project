@@ -7,7 +7,7 @@ A Python-based web application that automates database normalization up to **Thi
 
 Complete web interface of the Automated Database Normalizer.
 
-![Home Screen](screenshots_s/homepage.png)
+![Home Screen](screenshot_s/homepage.png)
 
 ---
 
@@ -32,7 +32,7 @@ Complete web interface of the Automated Database Normalizer.
 
 Users provide a JSON record and functional dependencies.
 
-![Input Data](screenshots_s/input.png)
+![Input Data](screenshot_s/input.png)
 
 ---
 
@@ -40,7 +40,7 @@ Users provide a JSON record and functional dependencies.
 
 Automatically generated normalized tables after processing the input.
 
-![Normalized Tables](screenshots_s/normalized_tables.png)
+![Normalized Tables](screenshot_s/normalized_tables.png)
 
 ---
 
@@ -48,7 +48,7 @@ Automatically generated normalized tables after processing the input.
 
 Download the generated SQL script containing `CREATE TABLE` and `INSERT` statements.
 
-![SQL Export](screenshots/_sexport_sql.png)
+![SQL Export](screenshot_s/export_sql.png)
 
 ---
 
